@@ -5,6 +5,7 @@ Spyder Editor
 Longest Collatz sequence
 """
 import matplotlib.pyplot as plt
+# Upper limit up to which collatz sequence will be generated
 Nt = 30000
 # Returns main sequence
 def collatz(n):
@@ -16,12 +17,14 @@ def collatz(n):
             n=3*n+1
         collatz_seq.append(n)
     return collatz_seq
+
 # Returns length of the sequence if 'n' is passed
 def collatz_length(n):
     return len(collatz(n))
 
 #n = int(input("Enter a number: "))
 result = []
+
 # Brute force check up to given number
 for i in range(2,Nt+1):
     result.append(collatz_length(i))
@@ -37,9 +40,8 @@ print ("\n The evolution of the sequence looks like...\n")
 plt.plot(collatz(num))
 plt.show()
 
+# The distribution of the number of terms in Collatz sequence is plotted
 print ("\n The distribution looks like following...\n")
-
-x = list(range(2,Nt))
 
 #Plotting the histogram
 plt.hist(result,50)
