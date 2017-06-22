@@ -36,7 +36,6 @@ print ("\nThe longest sequence has {rt} terms and it is produced by the number {
 #print(collatz(num))
 
 print ("\n The evolution of the sequence looks like...\n")
-
 plt.plot(collatz(num))
 plt.show()
 
